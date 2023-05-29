@@ -4,6 +4,11 @@
 # Models
 models/
 
+# Source Docs
+source_documents/
+new_pagerank_scores.json
+pagerank_scores.json
+
 # Local Chroma db
 .chroma/
 db/

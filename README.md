@@ -1,4 +1,18 @@
 # privateGPT
+
+# Steps to reproduce on codebase (capturing graph structure)
+
+1. Go to codebase, make dependency graph
+```npx madge --extensions js,jsx,ts,tsx --json modules > new_dependencies.json```
+2. Export codebase to .txt (modules), add it into "source_documents"
+3. Add dependency graph into source_documents as well
+4. Run ./create_pagerank.py
+5. Run ./privateGPT.py
+
+Modify /Users/rbh/.pyenv/versions/3.8.10/lib/python3.8/site-packages/langchain/vectorstores/base.py if you want to change weighting of similarity vs. pagerank
+
+# What privateGPT does
+
 Ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection!
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
